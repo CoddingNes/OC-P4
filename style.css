@@ -50,32 +50,22 @@ cite.temoignage__auteur {
     list-style: none!important;
 }
 
-a:not(li a):focus-visible, img:focus-visible, .social:focus-visible span{
+a:not(li a):focus-visible, img:focus-visible {
     transform: scale(1.05);
+}
+
+.social:focus-visible span {
+    transform: scale(1.2);
 }
 
 .social:focus-visible span {
     color: rgba(255, 255, 255, 1)!important;
 }
 
-li a:focus-visible {
-    animation: vibration 300ms;
+li a.underline:focus-visible {
+    text-decoration: underline;
 }
 
-@keyframes vibration {
-    0% {
-        rotate: -5deg;
-    }
-    25% {
-        rotate: 5deg;
-    }
-    50% {
-        rotate: -5deg;
-    }
-    75% {
-        rotate: 5deg;
-    }
-}
 
 #bloc-4-portfolio .titre-exemples-clients {
     max-width: 476px;
@@ -850,7 +840,6 @@ h4 {
 
 .bold-link {
     font-weight: 900;
-    text-decoration: underline!important;
 }
 
 .bgc-white {
@@ -940,13 +929,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -964,10 +953,6 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -976,8 +961,6 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
